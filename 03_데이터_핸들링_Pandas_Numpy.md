@@ -20,6 +20,8 @@ print(f"표준편차: {np.std(arr)}")
 print(arr + 10)
 ```
 
+![Numpy 실행 결과](images/07_numpy_result.png)
+
 ---
 
 ## 2. 표 형태의 데이터, Pandas
@@ -55,6 +57,8 @@ older_than_25 = df[df['나이'] > 25]
 print(older_than_25)
 ```
 
+![Pandas 기본 실행 결과](images/08_pandas_result.png)
+
 ---
 
 ## 3. 외부 데이터 불러오기 (CSV)
@@ -71,6 +75,8 @@ iris = pd.read_csv(url)
 
 print(iris.head())
 ```
+
+![Iris 데이터 로드 결과](images/09_iris_result.png)
 
 ---
 
@@ -98,5 +104,14 @@ print(df_sorted)
 3. 추출된 데이터의 `sepal_length` 평균값을 구해보세요.
 
 ```python
-# 여기에 실습 코드를 작성하세요
+# 전체 열 이름 확인
+print(f"열 이름: {iris.columns.tolist()}")
+
+# setosa 추출 및 sepal_length 평균
+setosa = iris[iris['species'] == 'setosa']
+print(f"setosa sepal_length 평균: {setosa['sepal_length'].mean()}")
 ```
+
+### ✅ 실습 과제 실행 결과
+
+![Pandas 및 Numpy 실습 실행 결과](images/10_pandas_practice.png)
